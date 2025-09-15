@@ -71,15 +71,14 @@ services:
     depends_on:
       - postgres
 
-  web:
+  ui:
     build:
-      context: ./src
-      dockerfile: Web/Dockerfile
+      context: ./src/UI/fronted
+      dockerfile: Dockerfile
     ports:
-      - "5055:8080"
+      - "3000:80"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+      - VITE_API_BASE=http://localhost:5055
     depends_on:
       - userservice
       - productservice

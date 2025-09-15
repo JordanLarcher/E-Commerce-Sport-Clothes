@@ -15,28 +15,34 @@ namespace Gym_Clothes_ECommerce.UserServices.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public IActionResult GetUsers()
+        [HttpPost("register")]
+        public IActionResult Register([FromBody] RegisterDto dto)
         {
-            var users = _context.Users.ToList();
-            return Ok(users);
-        }
+            if (string.IsNullOrWhiteSpace(dto.Name) || string.IsNullOrWhiteSpace(dto.Email) || string.IsNullOrWhiteSpace(dto.Password))
+                return BadRequest(new { message = "Todos los campos son obligatorios." });
 
-        [HttpGet("{id}")]
-        public IActionResult GetUser(int id)
-        {
-            var user = _context.Users.Find(id);
-            if (user == null)
-                return NotFound();
-            return Ok(user);
-        }
+            // Separar nombre completo en nombre y apellido
+            var names = dto.Name.Split(' ', 2);
+            var firstName = names.Length > 0 ? names[0] : "";
+            var lastName = names.Length > 1 ? names[1] : "";
 
-        [HttpPost]
-        public IActionResult CreateUser([FromBody] User user)
-        {
+            // Validar si el email ya existe
+            if (_context.Users.Any(u => u.Email == dto.Email))
+                return BadRequest(new { message = "El correo ya está registrado." });
+
+            var user = new User
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                Email = dto.Email,
+                PasswordHash = BCrypt.Net.BCrypt.HashPassword(dto.Password),
+                Role = UserRole.Customer,
+                Type = UserType.Buyer,
+                IsEmailVerified = false
+            };
             _context.Users.Add(user);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(GetUser), new { id = user.Id }, user);
+            return Ok(new { message = "Usuario registrado exitosamente." });
         }
     }
 }
