@@ -1,0 +1,91 @@
+version: "3.9"
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: gymstore
+      POSTGRES_PASSWORD: gymstorepass
+      POSTGRES_DB: gymstoredb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  userservice:
+    build:
+      context: ./src
+      dockerfile: Services/UserServices/Dockerfile
+    ports:
+      - "5004:5004"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - postgres
+
+  productservice:
+    build:
+      context: ./src
+      dockerfile: Services/ProductService/Dockerfile
+    ports:
+      - "5005:5005"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - postgres
+
+  orderservice:
+    build:
+      context: ./src
+      dockerfile: Services/OrderService/Dockerfile
+    ports:
+      - "5006:5006"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - postgres
+
+  paymentservice:
+    build:
+      context: ./src
+      dockerfile: Services/PaymentService/Dockerfile
+    ports:
+      - "5007:5007"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - postgres
+
+  notificationservice:
+    build:
+      context: ./src
+      dockerfile: Services/NotificationService/Dockerfile
+    ports:
+      - "5008:5008"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - postgres
+
+  web:
+    build:
+      context: ./src
+      dockerfile: Web/Dockerfile
+    ports:
+      - "5055:8080"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=gymstoredb;Username=gymstore;Password=gymstorepass
+    depends_on:
+      - userservice
+      - productservice
+      - orderservice
+      - paymentservice
+      - notificationservice
+
+volumes:
+  pgdata:

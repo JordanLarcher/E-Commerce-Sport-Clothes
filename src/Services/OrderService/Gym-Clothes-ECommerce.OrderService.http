@@ -1,0 +1,6 @@
+@Gym_Clothes_ECommerce.OrderService_HostAddress = http://localhost:5200
+
+GET {{Gym_Clothes_ECommerce.OrderService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

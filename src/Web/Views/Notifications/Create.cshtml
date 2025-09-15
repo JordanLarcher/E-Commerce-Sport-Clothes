@@ -1,0 +1,17 @@
+@model Gym_Clothes_ECommerce.Web.Models.NotificationViewModel
+
+<h2>Add Notification</h2>
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Message" class="form-label"></label>
+        <input asp-for="Message" class="form-control" />
+        <span asp-validation-for="Message" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="UserId" class="form-label"></label>
+        <input asp-for="UserId" class="form-control" />
+        <span asp-validation-for="UserId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

@@ -1,0 +1,27 @@
+@model IEnumerable<Gym_Clothes_ECommerce.Web.Models.ProductViewModel>
+
+<h2>Products</h2>
+<a class="btn btn-primary mb-2" asp-action="Create">Add Product</a>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price</td>
+                <td>@product.Stock</td>
+            </tr>
+        }
+    </tbody>
+</table>

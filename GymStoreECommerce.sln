@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1282F96B-C2B6-4A84-AFC4-72C936C03351}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.Web", "src\Web\Gym-Clothes-ECommerce.Web.csproj", "{659E73FF-1707-4380-8FFE-D73D3E15DA48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.Core", "src\Core\Gym-Clothes-ECommerce.Core.csproj", "{E4698A28-A8E7-4560-9289-51E0481908A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{B670B1A6-4E56-461C-9657-FD3280B0EA16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.UserServices", "src\Services\UserServices\Gym-Clothes-ECommerce.UserServices.csproj", "{0FA083A3-6D48-4D89-8DC8-49C868B5F81B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.PaymentService", "src\Services\PaymentService\Gym-Clothes-ECommerce.PaymentService.csproj", "{75505203-EFAD-4C50-BF79-CE74C6CCB7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.ProductService", "src\Services\ProductService\Gym-Clothes-ECommerce.ProductService.csproj", "{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.OrderService", "src\Services\OrderService\Gym-Clothes-ECommerce.OrderService.csproj", "{915401D2-A276-4CA0-90B2-FA66B8731288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gym-Clothes-ECommerce.NotificationService", "src\Services\NotificationService\Gym-Clothes-ECommerce.NotificationService.csproj", "{8CD88674-4076-469D-9900-5A43E1580A9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{659E73FF-1707-4380-8FFE-D73D3E15DA48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{659E73FF-1707-4380-8FFE-D73D3E15DA48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{659E73FF-1707-4380-8FFE-D73D3E15DA48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{659E73FF-1707-4380-8FFE-D73D3E15DA48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4698A28-A8E7-4560-9289-51E0481908A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4698A28-A8E7-4560-9289-51E0481908A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4698A28-A8E7-4560-9289-51E0481908A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4698A28-A8E7-4560-9289-51E0481908A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA083A3-6D48-4D89-8DC8-49C868B5F81B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA083A3-6D48-4D89-8DC8-49C868B5F81B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA083A3-6D48-4D89-8DC8-49C868B5F81B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA083A3-6D48-4D89-8DC8-49C868B5F81B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75505203-EFAD-4C50-BF79-CE74C6CCB7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75505203-EFAD-4C50-BF79-CE74C6CCB7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75505203-EFAD-4C50-BF79-CE74C6CCB7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75505203-EFAD-4C50-BF79-CE74C6CCB7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{915401D2-A276-4CA0-90B2-FA66B8731288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{915401D2-A276-4CA0-90B2-FA66B8731288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{915401D2-A276-4CA0-90B2-FA66B8731288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{915401D2-A276-4CA0-90B2-FA66B8731288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CD88674-4076-469D-9900-5A43E1580A9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CD88674-4076-469D-9900-5A43E1580A9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CD88674-4076-469D-9900-5A43E1580A9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CD88674-4076-469D-9900-5A43E1580A9F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{659E73FF-1707-4380-8FFE-D73D3E15DA48} = {1282F96B-C2B6-4A84-AFC4-72C936C03351}
+		{E4698A28-A8E7-4560-9289-51E0481908A4} = {1282F96B-C2B6-4A84-AFC4-72C936C03351}
+		{B670B1A6-4E56-461C-9657-FD3280B0EA16} = {1282F96B-C2B6-4A84-AFC4-72C936C03351}
+		{0FA083A3-6D48-4D89-8DC8-49C868B5F81B} = {B670B1A6-4E56-461C-9657-FD3280B0EA16}
+		{75505203-EFAD-4C50-BF79-CE74C6CCB7A3} = {B670B1A6-4E56-461C-9657-FD3280B0EA16}
+		{8E7958D9-C792-4FD9-9C5F-9E11FE62E8D3} = {B670B1A6-4E56-461C-9657-FD3280B0EA16}
+		{915401D2-A276-4CA0-90B2-FA66B8731288} = {B670B1A6-4E56-461C-9657-FD3280B0EA16}
+		{8CD88674-4076-469D-9900-5A43E1580A9F} = {B670B1A6-4E56-461C-9657-FD3280B0EA16}
+	EndGlobalSection
+EndGlobal

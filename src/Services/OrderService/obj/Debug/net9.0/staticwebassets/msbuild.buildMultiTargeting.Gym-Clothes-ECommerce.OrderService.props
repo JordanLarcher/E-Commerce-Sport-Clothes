@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/Gym-Clothes-ECommerce.OrderService.props" />
+</Project>

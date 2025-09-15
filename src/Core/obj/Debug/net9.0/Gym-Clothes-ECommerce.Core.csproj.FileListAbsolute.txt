@@ -1,0 +1,12 @@
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.AssemblyInfoInputs.cache
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.AssemblyInfo.cs
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.csproj.CoreCompileInputs.cache
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.csproj.AssemblyReference.cache
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/bin/Debug/net9.0/Gym-Clothes-ECommerce.Core.deps.json
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/bin/Debug/net9.0/Gym-Clothes-ECommerce.Core.dll
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/bin/Debug/net9.0/Gym-Clothes-ECommerce.Core.pdb
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.dll
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/refint/Gym-Clothes-ECommerce.Core.dll
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/Gym-Clothes-ECommerce.Core.pdb
+/home/jor/Documents/GymClothesStore-ECommerce/src/Core/obj/Debug/net9.0/ref/Gym-Clothes-ECommerce.Core.dll
